@@ -33,8 +33,8 @@ export default function Hero(){
             className="flex min-h-svh items-stretch px-6 pt-20 pb-16 bg-black"
             ref={container}>
 
-                <div className="mx-auto w-full max-w-5xl flex  justify-center ">
-                    <div className="flex flex-col flex-2 justify-center">
+                <div className="mx-auto w-full max-w-5xl flex  justify-center flex-wrap">
+                    <div className="flex flex-col flex-2 justify-center min-w-3xs">
                         <h1 className="max-w-4xl text-4xl leading-[1.05] font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl hero-item">
                             I'm a Full-Stack Developer
                         </h1>
