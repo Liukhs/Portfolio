@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "styles/Loader.css";
+
+@theme{
+    --color-brand: #2563eb;
+    --color-brand-hover: #1d4ed8;
+    --font-sans: "Inter", system-ui, sans-serif;
+
+}
+
+@media(prefers-reduced-motion: no-preference){
+    html{
+        scroll-behavior: smooth;
+    }
+}
