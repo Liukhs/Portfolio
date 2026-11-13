@@ -55,6 +55,12 @@ export default function SkillsCard(){
 
     const [selectedTech, setSelectedTech] = useState(null);
 
+    const activeTech = categorie
+      .flatMap(cat => cat.tecnologie)
+      .find(tech => tech.nome === selectedTech);
+
+    const SelectedIcon = activeTech?.icon;
+
    
 
     return(
@@ -71,9 +77,12 @@ export default function SkillsCard(){
                         <ul className='mt-4 flex flex-wrap gap-3'>
                             {tecnologie.map(({ nome, icon: Icon })=>(
                                 <li 
-                                className="flex-col rounded-full items-center justify-center p-4 border-2 border-black hover:text-blue-700 hover:border-blue-700 transition duration-300 hover:-translate-y-1"
+                                key={nome}
+
+                                className={`flex-col rounded-full items-center justify-center p-4 border-2 border-black hover:text-blue-700 hover:border-blue-700 transition duration-300 hover:-translate-y-1 ${selectedTech == nome ? 'border-blue-700 text-blue-700' : ''}`}
                                 onClick={() => 
                                     setSelectedTech(nome)
+                                    
                                 }>
                                     <Icon className='size-5' aria-hidden="true" />
                                     
@@ -86,10 +95,18 @@ export default function SkillsCard(){
         </div>
         {
             selectedTech != null ?
-            <div>
-                <h3 className='text-xl font-semibold text-black'>
-                    {selectedTech}
-                </h3>
+            <div className='mt-4'>
+              <div className='rounded-2xl flex-col border-2 border-black'>
+                <div className='flex items-center gap-4 bg-purple-600 p-4 rounded-t-2xl border-2 border-purple-600 w-full'>
+                  <div className='flex w-12 h-12 items-center justify-center bg-black rounded-2xl'>
+                    <SelectedIcon className="size-6 text-white"/>
+                  </div>
+                  <h3 className='text-xl font-semibold text-black'>
+                    {activeTech.nome}
+                  </h3>
+                </div>
+                <div className='flex-col p-4 h-10'></div>
+              </div>
             </div>
             : null
         }
