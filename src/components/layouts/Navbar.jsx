@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import { NavBarButton } from '../ui/Button'
 
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+
+
+
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -9,6 +14,14 @@ export default function Navbar() {
     { name: 'Progetti', href: '#projects' },
     { name: 'Contatti', href: '#contact' },
   ]
+
+  const HandleClick = (event, target) =>{
+    const smoother = ScrollSmoother.get();
+    if(!smoother) return;
+
+    event.preventDefault();
+    smoother.scrollTo(target, true);
+  }
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white backdrop-blur-md border-b border-slate-800/80 z-40" data-lag="0">
@@ -26,6 +39,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               className="text-sm font-medium text-black hover:text-cyan-400 transition"
+              onClick={(event) => HandleClick(event, link.href)}
             >
               {link.name}
             </a>
