@@ -7,6 +7,22 @@ export default function About() {
       className="flex min-h-svh items-center bg-white px-6 pt-20 pb-16"
     >
       <div className="mx-auto w-full max-w-5xl">
+        <div className='grid gap-10 md:grid-cols-2'>
+          <div className='flex flex-col items-start'>
+            <div className='flex items-center gap-3.5 text-[#66655f] text-[11px] font-medium tracking-[0.12em]'>
+              <span>02</span>
+              <span className="w-12 h-px bg-[#aaa9a3]"></span>
+              <span>Chi sono</span>
+            </div>
+            <h1 className="max-w-180 text-[64px] font-bold tracking[-0.07em] leading-[0.92]">Dietro il <span className="text-[#6d3df5]">codice</span>, ci sono io.</h1>
+          </div>
+          <div className='flex flex-col items-end justify-end'>
+            <p className="pb-2 text-[15px] leading-[1.75] max-w-97.5 m-0">
+              Full-stack developer, curioso per natura. Progetto prodotti digitali completi, dal primo componente all'ultima API.
+            </p>
+          </div>
+        </div>
+        <div className="w-full h-px bg-[#aaa9a3] mt-10"></div>
         
 
         <div className="mt-12 grid gap-12 md:grid-cols-2">
