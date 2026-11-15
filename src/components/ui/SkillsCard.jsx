@@ -38,8 +38,8 @@ export default function SkillsCard(){
             ))}
           </div>
           <article
-            className={`grid md:grid-cols-[1.25fr_0.75fr] min-h-87.5 overflow-hidden border border-[#b8b7b1] rounded-[22px] bg-[#fcfb780]/86 shadow-[0_28px_70px_rgba(38,31,18,0.08)] 
-            transition duration-300 ${selectedTech != null ? 'opacity-100' : 'opacity-0'}
+            className={`grid md:grid-cols-[1.25fr_0.75fr] overflow-hidden border border-[#b8b7b1] rounded-[22px] bg-[#fcfb780]/86 shadow-[0_28px_70px_rgba(38,31,18,0.08)] 
+            transition-[max-height,opacity] duration-300 ease-in ${selectedTech != null ? 'opacity-100 min-h-87.5' : 'opacity-0 max-h-0'}
             animate-[detail-in_420ms_cubic-bezier(0.2,0.7,0.2,1)_both]`}
             role='tabpanel'
             key={selectedTech}

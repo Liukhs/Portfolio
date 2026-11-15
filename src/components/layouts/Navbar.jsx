@@ -24,7 +24,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white backdrop-blur-md border-b border-slate-800/80 z-40" data-lag="0">
+    <nav className="fixed top-0 left-0 right-0 z-20 grid grid-cols-[1fr_auto_1fr] items-center h-19 p-[0_clamp(24px,4.2vw,72px)] bg-white border-b border-b-black" data-lag="0">
       <div className="w-full mx-auto px-6 h-16 flex items-center">
         
         {/* LOGO / NOME */}

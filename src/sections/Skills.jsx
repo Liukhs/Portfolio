@@ -16,7 +16,7 @@ export default function Skills() {
             </div>
             <h1 className="max-w-180 text-[64px] font-bold tracking[-0.07em] leading-[0.92]">Il mio <span className="text-[#6d3df5]">toolkit</span> digitale.</h1>
           </div>
-          <div className="flex flex-col items-end justify-end">
+          <div className="flex flex-col md:items-end md:justify-end">
             <p className="pb-2 text-[15px] leading-[1.75] max-w-97.5 m-0">
               Linguaggi, framework e strumenti che uso ogni giorno per trasformare idee
               in prodotti digitali concreti.
