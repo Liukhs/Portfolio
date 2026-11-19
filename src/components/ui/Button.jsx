@@ -30,9 +30,11 @@ export function NavBarButton({reference, contenuto}){
     return(
         <a
             href={reference}
-            className="rounded-4xl bg-brand px-4 py-2 text-xs font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-brand-hover hover:shadow-lg active:translate-y-0 active:scale-95"
+            className="inline-flex items-center justify-self-end gap-4.5 
+            min-w-32.5 p-[12px_15px] border border-(--ink) rounded-[999px] 
+            text-[12px] font-semibold transition-all duration-180 ease-[ease]"
           >
-            {contenuto} 
+            {contenuto} <ArrowUpRight />
           </a>
     )
 }
